@@ -1,0 +1,82 @@
+header {
+    display: flex;
+    align-items: center;
+    background-color: orange;
+    padding: 2rem 5%;
+}
+
+.clickableArea {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.clickableArea input {
+    width: 20rem;
+    padding: .5rem;
+    border-radius: .2rem;
+    border: 0;
+    background-color: orange;
+    text-transform: none;
+}
+
+.clickableArea input::placeholder {
+    color: #FFF;
+}
+
+button {
+    padding: .5rem;
+    background-color: #7159c1;
+    border: none;
+    cursor: pointer;
+    color: #FFF;
+    font-weight: 700;
+    border-radius: .2rem;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    opacity: .8;
+}
+
+.synonyms {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(12rem, 1fr));
+    gap: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .synonyms {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .synonyms {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+.synonyms .synonym-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    height: 4rem;
+    border-radius: .4rem;
+    color: #FFF;
+    font-weight: 800;
+    background-color: #7159c1;
+    box-shadow: 0px 10px 15px -3px #7159c1;
+}
+
+.synonyms .synonym-item:hover {
+    background-color: #ffa500;
+    box-shadow: 0px 10px 15px -3px #ffa500;
+}
